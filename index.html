@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cozy Circle Family Care — one shared place to care for Mom or Dad</title>
+<meta name="description" content="A simple shared space for families caring for an aging parent: medications, appointments, documents and notes — so everyone knows what happened and what's next. Join the early-access list.">
+<meta property="og:title" content="Cozy Circle Family Care — care for a parent, together">
+<meta property="og:description" content="Medications, appointments, documents and notes in one shared place for the whole family. Join the early-access list.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1d2a23;--muted:#56645c;--pine:#1f4a36;--pine2:#2f6a4f;--gold:#d99a2b;--cran:#a8323a;--cream:#fbf5ea;--paper:#fffdf8;--soft:#eef4ef;--line:#e3dccd}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Atkinson Hyperlegible",system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:19px;line-height:1.55}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.08;letter-spacing:-.01em}
+.btn{display:inline-block;background:var(--gold);color:#1d1d1d;font-weight:700;text-decoration:none;border-radius:999px;padding:16px 30px;font-size:19px;box-shadow:0 6px 0 #b77f1f;transition:transform .12s}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(2px);box-shadow:0 3px 0 #b77f1f}
+.btn:focus-visible{outline:3px solid var(--cran);outline-offset:4px}
+header{background:var(--pine);color:var(--cream)}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{font-family:Fraunces,serif;font-weight:900;font-size:22px;text-decoration:none}
+.logo i{font-style:normal;color:var(--gold)}
+nav a.small{font-weight:700;font-size:16px;text-decoration:none;border:2px solid rgba(251,245,234,.5);border-radius:999px;padding:8px 16px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:40px 0 72px}
+.eyebrow{font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-size:14px}
+.hero h1{font-size:clamp(38px,5.4vw,60px);margin:14px 0 18px;font-weight:900}
+.hero p.lead{font-size:21px;color:#e6eee8;max-width:34em;margin-bottom:28px}
+.hero .note{font-size:15px;color:#c9d6cd;margin-top:16px}
+/* phone mock */
+.phone{background:#111;border-radius:44px;padding:14px;max-width:340px;margin:0 auto;box-shadow:0 30px 60px rgba(0,0,0,.35);transform:rotate(2deg)}
+.screen{background:var(--paper);border-radius:32px;overflow:hidden;color:var(--ink)}
+.s-top{background:var(--soft);padding:22px 20px 16px}
+.s-top b{font-family:Fraunces,serif;font-size:22px;display:block}
+.s-top span{font-size:14px;color:var(--muted)}
+.s-sec{padding:14px 20px;border-top:1px solid var(--line)}
+.s-sec h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.med{display:flex;align-items:center;justify-content:space-between;font-size:16px;padding:6px 0}
+.chk{font-size:13px;font-weight:700;border-radius:999px;padding:4px 10px;background:#dfeee3;color:var(--pine)}
+.chk.no{background:#fbe3e1;color:var(--cran)}
+.appt{font-size:15px;line-height:1.35}
+.appt b{display:block}
+.handoff{font-size:15px;background:#fbf1d9;border-radius:12px;padding:10px 12px;line-height:1.4}
+/* sections */
+section{padding:72px 0}
+.kicker{font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--cran);font-size:14px;margin-bottom:10px}
+h2{font-size:clamp(30px,3.8vw,42px);color:var(--pine);margin-bottom:18px}
+.pains{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
+.pain{background:#fff;border:2px solid var(--line);border-radius:22px;padding:24px}
+.pain q{font-family:Fraunces,serif;font-size:21px;font-weight:700;display:block;margin-bottom:10px;quotes:"“" "”"}
+.pain p{color:var(--muted);font-size:17px}
+.feats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px}
+.feat{display:flex;gap:16px;background:var(--soft);border-radius:22px;padding:22px}
+.feat .ic{flex:none;width:48px;height:48px;border-radius:50%;background:var(--pine);color:var(--cream);display:grid;place-items:center;font-weight:700;font-size:20px}
+.feat h3{font-size:22px;color:var(--pine);margin-bottom:4px}
+.feat p{font-size:17px;color:var(--muted)}
+.alt{background:var(--cream)}
+.promise{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:26px}
+.promise div{border-top:5px solid var(--gold);padding-top:14px}
+.promise b{font-family:Fraunces,serif;font-size:21px;display:block;margin-bottom:6px;color:var(--pine)}
+.promise p{font-size:17px;color:var(--muted)}
+.cta{background:var(--pine);color:var(--cream);text-align:center;border-radius:32px;padding:56px 24px;margin:0 auto}
+.cta h2{color:var(--cream)}
+.cta p{color:#dbe6df;max-width:34em;margin:0 auto 26px;font-size:20px}
+.faq details{background:#fff;border:2px solid var(--line);border-radius:18px;padding:18px 22px;margin-top:14px}
+.faq summary{font-weight:700;font-size:19px;cursor:pointer;color:var(--pine)}
+.faq details p{margin-top:10px;color:var(--muted);font-size:17px}
+footer{padding:36px 0 48px;color:var(--muted);font-size:15px;text-align:center}
+@media (max-width:860px){.hero{grid-template-columns:1fr;padding-top:16px}.phone{transform:none}.pains,.feats,.promise{grid-template-columns:1fr}section{padding:56px 0}}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav><a class="logo" href="#">Cozy <i>Circle</i> Family Care</a><a class="small" href="#join">Join the waitlist</a></nav>
+    <div class="hero">
+      <div>
+        <div class="eyebrow">For families caring for an aging parent</div>
+        <h1>Care for Mom or Dad — together, not in a group chat.</h1>
+        <p class="lead">One simple shared place for medications, appointments, documents and notes. Every sibling, spouse and helper sees what happened today and what comes next.</p>
+        <a class="btn" href="#join">Get early access</a>
+        <p class="note">Free to join the list · launch discount for early families · no spam, ever</p>
+      </div>
+      <div class="phone" aria-hidden="true">
+        <div class="screen">
+          <div class="s-top"><b>Mom’s care circle</b><span>You, Dana, Mike and Rosa (aide)</span></div>
+          <div class="s-sec"><h4>Today’s medications</h4>
+            <div class="med">Morning pills <span class="chk">Given · Rosa 8:10</span></div>
+            <div class="med">Evening pills <span class="chk no">Not yet</span></div>
+          </div>
+          <div class="s-sec"><h4>Next appointment</h4>
+            <div class="appt"><b>Cardiologist · Thu 10:30</b>Mike is driving · bring the blood-test results</div>
+          </div>
+          <div class="s-sec"><h4>Handoff note</h4>
+            <div class="handoff">“Slept well. Ate half of lunch. Asked about the photo album — it’s on the shelf.” — Dana</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <div class="kicker">Sound familiar?</div>
+      <h2>Caring for a parent is a team job — with no team tools.</h2>
+      <div class="pains">
+        <div class="pain"><q>Did anyone give Dad his evening pills?</q><p>Three people help, nobody is sure, and the answer is buried in a chat.</p></div>
+        <div class="pain"><q>What did the doctor actually say?</q><p>One sibling went to the appointment. The notes live in their head.</p></div>
+        <div class="pain"><q>Where is the insurance card?</q><p>Documents, numbers and passwords are scattered across drawers and phones.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="kicker">What it does</div>
+      <h2>Everything the family needs, in one calm place.</h2>
+      <div class="feats">
+        <div class="feat"><div class="ic">1</div><div><h3>A shared care circle</h3><p>Invite siblings, a spouse or a paid aide. Everyone sees the same up-to-date picture.</p></div></div>
+        <div class="feat"><div class="ic">2</div><div><h3>Medication log</h3><p>Tap “given” and the whole family knows — who gave it and when. No more double doses or missed ones.</p></div></div>
+        <div class="feat"><div class="ic">3</div><div><h3>Appointments and notes</h3><p>Who’s driving, what to bring, and what the doctor said — saved where everyone can read it.</p></div></div>
+        <div class="feat"><div class="ic">4</div><div><h3>Documents in one place</h3><p>Insurance, ID copies, care plans and contacts — findable in seconds, not hours.</p></div></div>
+        <div class="feat"><div class="ic">5</div><div><h3>One-page emergency summary</h3><p>Medications, conditions, doctors and contacts as a printable PDF for the ER or a new caregiver.</p></div></div>
+        <div class="feat"><div class="ic">6</div><div><h3>Daily handoff notes</h3><p>A short note at the end of each visit, so the next person picks up where you left off.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="kicker">Our promise</div>
+      <h2>Built to be easy for everyone in the family.</h2>
+      <div class="promise">
+        <div><b>Big, clear and simple</b><p>Large text and a few clear buttons — easy for every age, no training needed.</p></div>
+        <div><b>Works in any browser</b><p>Phone, tablet or computer. Nothing to install to get started.</p></div>
+        <div><b>Private by design</b><p>Your family’s information is yours. We will never sell it or show you ads.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="join">
+    <div class="wrap">
+      <div class="cta">
+        <div class="eyebrow">Early access</div>
+        <h2>Be one of the first families to try it.</h2>
+        <p>Join the waitlist in 30 seconds. We’ll email you when it’s ready, with a launch discount for early families — and we’d love to hear what would help you most.</p>
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfdpeW34nFVAjYH3EWjiC4-B54VE2kFKj_9UR3RQbXCYLpmGg/viewform?hl=en" target="_blank" rel="noopener">Join the waitlist</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap">
+      <div class="kicker">Questions</div>
+      <h2>Good to know</h2>
+      <details><summary>Is it available now?</summary><p>Not yet — we are building it with input from families on the waitlist. Join to get early access and help shape it.</p></details>
+      <details><summary>How much will it cost?</summary><p>We’re planning a simple, fair price for the whole family — not per person. Early families will get a launch discount.</p></details>
+      <details><summary>Is it medical advice?</summary><p>No. Cozy Circle Family Care helps families organize and share information. It does not give medical advice — always follow your doctor and pharmacist.</p></details>
+      <details><summary>Who is behind it?</summary><p>Cozy Circle makes easy-to-use activities, planners and care organizers for families and older adults. This is our first app.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Cozy Circle · <a href="#join">Join the waitlist</a></footer>
+</body>
+</html>
